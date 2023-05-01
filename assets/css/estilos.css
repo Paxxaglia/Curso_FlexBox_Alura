@@ -41,6 +41,16 @@ body{
     width: 75vw;
     height: 100vh;
     background-color: #15191C;
+
+    position: absolute;
+    left: -100vw;
+    transition: .5s;
+}
+
+.menu-lateral--ativo{
+
+    left:0;
+    transition: .5s;
 }
 
 .menu-lateral__logo{
@@ -91,3 +101,4 @@ body{
     padding-left: 56px;
     border-left: 8px solid white;
 }
+
