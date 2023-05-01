@@ -87,5 +87,7 @@ body{
 }
 
 .menu-lateral__link--ativo{
-
+    color: white;
+    padding-left: 56px;
+    border-left: 8px solid white;
 }
