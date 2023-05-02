@@ -7,9 +7,14 @@ body{
     background-color: #1D232A;
     font-family: 'Open Sans', 'icones', sans-serif;
     color: #FFFFFF;
-    
 }
 
+@media screen and (min-width:1440px) {
+    body{
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+}
 .cabecalho{
     display: flex;
     justify-content: space-between;
@@ -18,6 +23,58 @@ body{
     padding: 8px 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 } 
+
+.cabecalho__perfil{
+    display: none;
+}
+
+@media screen and (min-width:1440px) {
+    .cabecalho{
+        background-color: #1D232A ;
+        display: grid;
+        column-gap: 32px;
+        grid-template-columns: 1fr auto;
+        padding: 16px 60px;
+        height: 80px;
+        box-sizing: border-box;
+
+    }
+    .cabecalho__menu{
+        display: none;
+    }
+    .cabecalho__logo{
+        display: none;
+    }
+
+    .cabecalho__perfil{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 8px;
+        align-items: center;
+        justify-self: self-end;
+        color:#95999C;
+        padding: 8px 32px;
+        border-right: 1px solid #95999C;
+    }
+
+    .cabecalho__perfil::before{
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/profile_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    .cabecalho__perfil::after{
+        content: "\e90d";
+        color: #FFFFFF;
+        font-size: 1.5rem;
+    }
+}
 
 .cabecalho__menu i::before{
     content: "\e904";
@@ -102,6 +159,16 @@ body{
     border-left: 8px solid white;
 }
 
+@media screen and (min-width:1440px) {
+    .menu-lateral{
+        position: static;
+        width: 200px;
+    }
+    .menu-lateral__link{
+        position: static;
+    }
+}
+
 .principal{
     padding: 24px 16px;
     display: grid;
@@ -116,6 +183,15 @@ body{
 .titulo-secao{
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+@media screen and (min-width:1440px) {
+    .principal{
+        display:grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 32px;
+        padding: 16px 60px;
+    }
 }
 
 .cartao{
