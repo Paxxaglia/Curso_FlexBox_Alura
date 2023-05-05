@@ -228,6 +228,7 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 8px;
+    align-items: flex-start;
 }
 
 .cartao__destaque {
@@ -285,6 +286,12 @@ body {
 
 .cartao__botao--play::before {
     content: "\e90b";
+    font-size: 24px;
+
+}
+
+.cartao__botao--pico::before {
+    content: "\e908";
     font-size: 24px;
 
 }
