@@ -102,6 +102,7 @@ body {
     background-color: #15191C;
 
     position: absolute;
+    z-index: 10;
     left: -100vw;
     transition: .5s;
 }
@@ -233,6 +234,10 @@ body {
     grid-column: span 2;
 }
 
+.cartao__imagem--desktop{
+    display:none;
+}
+
 .cartao--destaque {
     margin-bottom: 16px;
 }
@@ -299,6 +304,20 @@ body {
 }
 
 @media screen and (min-width:1440px) {
+
+    .cartao__imagem--desktop{
+        display:block;
+    }
+
+    .cartao__imagem--mobile{
+        display:none;
+    }
+
+    .cartao__botao--destaque{
+        grid-column: auto;
+        padding: 16px 8px;
+    }
+
     .cartao--recentes {
         display: grid;
         grid-template-columns: auto auto;
@@ -307,6 +326,7 @@ body {
         width: 256px;
         padding: 16px;
         box-sizing: border-box;
+        align-self: flex-start;
     }
 
     .cartao--recentes .cartao__titulo {
@@ -357,27 +377,49 @@ body {
     gap: 16px;
 }
 
-
-.destaque-video {
-    grid-area: destaque-video;
+@media screen and (min-width:1440px){
+    .secao{
+        grid-template-columns: repeat(4 , 1fr);
+    }
+    .titulo-secao{
+        grid-column: span 4;
+    }
 }
 
-.videos-recentes {
-    grid-area: videos-recentes;
+@media screen and (min-width:1440px) {
+    .destaque-video {
+        grid-area: destaque-video;
+    }
+    
+    .videos-recentes {
+        grid-area: videos-recentes;
+    }
+    
+    .secao-videos {
+        grid-area: secao-videos;
+    }
+    
+    .destaque-produtos {
+        grid-area: destaque-produtos;
+    }
+    
+    .produtos-recentes {
+        grid-area: produtos-recentes;
+    }
+    
+    .secao-produtos {
+        grid-area: secao-produtos;
+    }
 }
 
-.secao-videos {
-    grid-area: secao-videos;
+.cartao-destaque--picos{
+
+    border-radius: 15px;
+    height: 600px;
+    position: inherit;
+
 }
 
-.destaque-produtos {
-    grid-area: destaque-produtos;
-}
-
-.produtos-recentes {
-    grid-area: produtos-recentes;
-}
-
-.secao-produtos {
-    grid-area: secao-produtos;
+.cartao__imagem--picos{
+    transform: scale(4.5);
 }
